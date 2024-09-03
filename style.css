@@ -1,0 +1,374 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+/* Ensure the section element covers the entire viewport */
+/* Ensure the section element covers the entire viewport */
+.section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Navigation styling */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 70px;
+    background-color: transparent; /* Change this to your preferred color */
+    position: sticky; /* Keeps the nav at the top when scrolling */
+    top: 0;
+    border: none;
+    color: #fff;
+    z-index: 1000; /* Ensure it stays above other content */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+nav h1 {
+    font-size: 24px; /* Adjusted font size for better balance */
+    color: #ffffff; /* Ensure text is visible on the background */
+    cursor: pointer;
+}
+
+/* Navigation links container */
+nav .part2 {
+    display: flex;
+    gap: 20px; /* Space between navigation items */
+}
+
+/* Style for each nav item */
+nav .part2 h4 {
+    font-size: 20px; /* Adjusted for better readability */
+    font-weight: 600;
+    /* color: #ffffff;  */
+    cursor: pointer;
+    margin: 0; /* Remove default margin */
+}
+
+/* Add a hover effect to nav items */
+nav .part2 h4:hover {
+    color: #ffffff;
+    background-color: #79797945; /* Adjust to fit your theme */
+    padding: 5px 10px; /* Add some padding for better visual effect */
+    border-radius: 5px; /* Rounded corners for hover effect */
+    /* transition: background-color 0.3s ease, color 0.3s ease; */
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    color: #fff;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Make sure the video is behind the content */
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: gold;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        padding: 20px 10px; /* Reduce padding on smaller screens */
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav .part2 {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        background-color: transparent;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        border-radius: 0 0 10px 10px;
+    }
+  #nav-menu h4{
+    color: white;
+  }
+
+    nav .part2.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+
+/* Media query to adjust hero content */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 36px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* About Us Section */
+.about-us {
+    display: flex;
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Product Gallery Section */
+.product-gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-item img {
+    width: 100%;
+    height: 300px; /* Standard height */
+    object-fit: cover; /* Ensures image covers the entire area */
+    border-radius: 10px; /* Optional: adds a bit of rounded corners */
+}
+
+.product-info {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #25d366; /* WhatsApp green */
+    color: white;
+    text-align: center;
+    
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.whatsapp-button:hover {
+    background-color: #22b358; /* Slightly darker green on hover */
+}
+
+
+/* Contact Us Section */
+.contact-us {
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-us input,
+.contact-us textarea,
+.contact-us button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-details {
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.back-to-top {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #333;
+}
+
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    margin-top: 10px;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+    .contact-details {
+        padding: 10px;
+    }
+    
+.whatsapp-button{
+    margin: 8px 100px;
+    width: 200px;
+}
+
+    .map-container {
+        padding-bottom: 75%; /* Adjust aspect ratio for smaller screens */
+    }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .contact-details {
+        padding: 15px;
+    }
+
+    .map-container {
+        padding-bottom: 60%; /* Slight adjustment for tablet aspect ratio */
+    }
+}
+
+/* Desktops and Large Screens */
+@media (min-width: 1025px) {
+    .contact-details {
+        padding: 30px;
+    }
+
+    .map-container {
+        padding-bottom: 56.25%; /* 16:9 aspect ratio for large screens */
+    }
+}
+.about-us {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    font-family: 'Lora', serif; /* Elegant serif font */
+    color: #333;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-text h2 {
+    font-family: 'Playfair Display', serif; /* Stylish, high-end font for headings */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #2c3e50; /* Darker color for contrast */
+}
+
+.about-text p {
+    font-family: 'Lora', serif;
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for depth */
+}
+
